@@ -46,6 +46,11 @@ func init() {
 		cmd.Stdout = os.Stdout
 		cmd.Run()
 	}
+	clear["darwin"] = func() {
+		cmd := exec.Command("clear")
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	}
 }
 
 func ClearScreen() {
